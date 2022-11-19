@@ -1,0 +1,27 @@
+extends layouts/index.pug
+
+block tabla
+    style.
+        .fotos{
+            height: 50px;
+            width: 50px;
+        }
+    h1='Lita de productos:'
+    table(class="table")
+        thead 
+            tr
+                th(scope="col")='#'
+                th(scope="col")='Producto'
+                th(scope="col")='Precio'
+                th(scope="col")='Foto'
+        if renderConditional
+            each producto in datafile
+                tr
+                    td=producto.id
+                    td=producto.title
+                    td=producto.price
+                    td
+                        img(class="fotos" src=producto.thumbnail)
+        else
+            h3='No hay productos en la lista.'
+    a(href="/" type="button" class="btn btn-warning mt-5 mb-5")='A la carga de productos'

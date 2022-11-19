@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafío Nº5 Coderhouse</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <main class="d-flex justify-content-center align-items-center flex-column">
+    <h3 class="mt-5">Carga de productos</h3>
+    <div class="container  mt-5">
+
+      <form id="inputProducts" method="post" action="/productos">
+        <fieldset>
+          <legend>Carga de productos</legend>
+
+          <div class="mb-3">
+            <label for="title" class="form-label">Producto</label>
+            <input type="text" name="title" class="form-control" id="title" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="price" class="form-label">Precio</label>
+            <input type="number" step="0.01" name="price" class="form-control" id="price" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="thumbnail" class="form-label">URL de imágen</label>
+            <input type="text" name="thumbnail" class="form-control" id="thumbnail" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Cargar</button>
+
+        </fieldset>
+      </form>
+      <a href="/productos" class="btn btn-warning mt-5"> A lista de productos</a>
+    </div>
+  </main>
+
+</body>
+
+</html>
